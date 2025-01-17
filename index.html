@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJTrump</title>
+    <link rel="icon" href="DJTrump.jpg">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 25%, rgba(208,222,33,1) 50%, rgba(79,220,74,1) 75%, rgba(63,169,245,1) 100%);
+            background-size: 300% 300%;
+            animation: pulsateVibes 6s infinite;
+        }
+
+        @keyframes pulsateVibes {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: black;
+            text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(0, 255, 0), 0 0 30px rgb(0, 0, 255);
+            animation: shadowGlow 2s infinite;
+        }
+
+        @keyframes shadowGlow {
+            0% {
+                text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(0, 255, 0), 0 0 30px rgb(0, 0, 255);
+            }
+            50% {
+                text-shadow: 0 0 30px rgb(255, 255, 0), 0 0 40px rgb(0, 255, 255), 0 0 50px rgb(255, 0, 255);
+            }
+            100% {
+                text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(0, 255, 0), 0 0 30px rgb(0, 0, 255);
+            }
+        }
+
+        .image {
+            margin: 20px 0;
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+
+        .copy-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .copy-button:hover {
+            background-color: grey;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .links a:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>DJ Trump</h1>
+    <div class="image">
+        <img src="DJTrump.jpg" alt="DJ Trump" width="200">
+    </div>
+
+    <div class="button-container">
+        <button class="copy-button" onclick="copyAddress()">Click to Copy</button>
+    </div>
+
+    <div class="image">
+        <img src="DJTbanner.jpg" alt="DJ Trump Banner" width="400">
+    </div>
+
+    <div class="links">
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://telegram.org" target="_blank">Telegram</a>
+        <a href="https://dexscreener.com" target="_blank">Dexscreener</a>
+    </div>
+
+    <script>
+        function copyAddress() {
+            const address = "DJTrumpContractAddress";
+            navigator.clipboard.writeText(address).then(() => {
+                alert("Address copied to clipboard!");
+            }, () => {
+                alert("Failed to copy the address.");
+            });
+        }
+    </script>
+</body>
+</html>
